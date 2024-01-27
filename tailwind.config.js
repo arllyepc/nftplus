@@ -38,6 +38,11 @@ module.exports = {
         "card-nft": "17.4rem",
         "card-collector": "37rem",
         "footer-content": "20.2rem",
+        "nav-header": "48.3rem",
+        "lobo-size-mb": "10rem",
+        "left-cont-footer": "20.25rem",
+        "content-desc-hero": "41.125rem",
+
       },
       width: {
         "area-cards-mobile": "43.7rem",
@@ -63,7 +68,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       backgroundImage: {
-        "hero-pattern": 'url("/bg-hero.svg")',
+        "hero-pattern": 'url("../assets/bg-hero.svg")',
         banner: 'url("/bg-banner.svg")',
       },
     },
