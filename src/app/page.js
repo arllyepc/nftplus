@@ -25,6 +25,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Arlly",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb02,
@@ -33,6 +34,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Agebaba",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb03,
@@ -41,6 +43,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "MasterOfOblivion",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb04,
@@ -49,6 +52,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Arlly",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb05,
@@ -57,6 +61,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Mamamia",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb06,
@@ -65,6 +70,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Kurumin",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb07,
@@ -73,6 +79,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Ahoy",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
   {
     thumbnail: Thumb08,
@@ -81,6 +88,7 @@ export const cardsCollectors = [
     valueBtc: Math.round(Math.random() * 1000) / 10000,
     valueBrl: Math.round(Math.random() * 1000),
     creator: "Baby",
+    likeFavorites: Math.floor(Math.random() * 100) + 1,
   },
 ];
 

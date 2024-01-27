@@ -23,7 +23,7 @@ export function CardNft({
         />
         <div className="hover:cursor-pointer absolute top-2 right-2 z-10 flex items-center gap-2 py-3 px-6 bg-gray-area-favorite rounded-full border border-gray-border-card">
           <Image src={IconHeart} alt="Icon Heart" />
-          <small>{likeFavorites}</small>
+          <small className="-mt-[2px]">{likeFavorites}</small>
         </div>
       </div>
       <div className="w-full p-4">
