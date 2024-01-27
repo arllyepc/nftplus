@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import IconBoost from "@/assets/icon-boost.svg";
+import IconPlus from "@/assets/icon-plus.svg";
 import ContainerGrid from "../container";
 import SmallNFT01 from "@/assets/nft-small.png";
 import SmallNFT02 from "@/assets/double-nft.png";
@@ -13,7 +13,7 @@ export function SectioHero() {
     <section className="overflow-hidden pt-36 bg-hero-pattern bg-no-repeat">
       <ContainerGrid className="flex flex-col items-center">
         <h3 className="flex items-center gap-2 text-sm mb-3 @tablet:text-base @desktop:text-xl">
-          <Image src={IconBoost} alt="Icon Boost" />
+          <Image src={IconPlus} alt="Icon Plus" />
           <span>Adentre um universo de possibilidades infinitas</span>
         </h3>
 
@@ -54,9 +54,11 @@ export function SectioHero() {
           <Image src={AppleStore} alt="Apple Store" />
         </div>
         <CardsHero />
-        <div className="w-full border-t border-white border-opacity-5 mt-10
+        <div
+          className="w-full border-t border-white border-opacity-5 mt-10
           @desktop:mt-36
-        "></div>
+        "
+        ></div>
       </ContainerGrid>
     </section>
   );

@@ -5,7 +5,7 @@ import Link from "next/link";
 // Constants
 export const footerNav = [
   {
-    title: "NFT Boost®",
+    title: "NFT Plus®",
     items: [
       {
         label: "Download",
