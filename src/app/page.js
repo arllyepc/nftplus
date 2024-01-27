@@ -15,6 +15,7 @@ import Thumb05 from "@/assets/img-nft/05.jpg";
 import Thumb06 from "@/assets/img-nft/06.jpg";
 import Thumb07 from "@/assets/img-nft/07.jpg";
 import Thumb08 from "@/assets/img-nft/08.jpg";
+import SectionQuestions from "@/components/section-questions";
 
 export const cardsCollectors = [
   {
@@ -106,6 +107,7 @@ export default function Home() {
         data={cardsCollectors}
       />
       <SectionBanner />
+      <SectionQuestions />
     </>
   );
 }
