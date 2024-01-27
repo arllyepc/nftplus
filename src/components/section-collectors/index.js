@@ -1,12 +1,5 @@
-import ContainerGrid from "@/components/container";
-import { TitleSection } from "@/components/title-section";
-import CardNft from "@/components/card-nft";
-import CardCollector from "@/components/card-collectors";
-import SectioHero from "@/components/section-hero";
-import SectionCarrousel from "@/components/section-carrousel";
-import SectionCollectors from "@/components/section-collectors";
-import SectionBanner from "@/components/section-banner";
-
+// Constants
+// Medias
 import Thumb01 from "@/assets/img-nft/01.jpg";
 import Thumb02 from "@/assets/img-nft/02.jpg";
 import Thumb03 from "@/assets/img-nft/03.jpg";
@@ -22,90 +15,86 @@ export const cardsCollectors = [
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Cat #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Arlly",
   },
   {
     thumbnail: Thumb02,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Snike #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Agebaba",
   },
   {
     thumbnail: Thumb03,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Hatter #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "MasterOfOblivion",
   },
   {
     thumbnail: Thumb04,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Sailor Skull #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Arlly",
   },
   {
     thumbnail: Thumb05,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Borey #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Mamamia",
   },
   {
     thumbnail: Thumb06,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Sniper #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Kurumin",
   },
   {
     thumbnail: Thumb07,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Dutre #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Ahoy",
   },
   {
     thumbnail: Thumb08,
     percent: `+${Math.floor(Math.random() * 100) + 1}%`,
     name: `Borecx #${Math.floor(Math.random() * 900) + 100}`,
     valueBtc: Math.round(Math.random() * 1000) / 10000,
-    valueBrl: Math.round(Math.random() * 1000),
-    creator: "Baby",
   },
 ];
 
-export default function Home() {
+// Components
+import ContainerGrid from "@/components/container";
+import TitleSection from "@/components/title-section";
+import CardCollectors from "@/components/card-collectors";
+
+export default function SectionCollectors() {
+  // Divida o array de cards em duas partes
+  const halfIndex = Math.ceil(cardsCollectors.length / 2);
+  const leftColumn = cardsCollectors.slice(0, halfIndex);
+  const rightColumn = cardsCollectors.slice(halfIndex);
+
   return (
-    <>
-      <SectioHero />
-      <SectionCarrousel
-        subtitle="Destaque em Coleções"
-        title="Coleções notáveis"
-        data={cardsCollectors}
-      />
-      <hr className="border-t border-white border-opacity-5 max-w-grid mx-auto" />
-      <SectionCarrousel
-        subtitle="Seleção Mensal"
-        title="Destaque do Mês"
-        data={cardsCollectors}
-      />
-      <SectionCollectors />
-      <hr className="border-t border-white border-opacity-5 max-w-grid mx-auto" />
-      <SectionCarrousel
-        subtitle="Em Tendência"
-        title="Tendências"
-        data={cardsCollectors}
-      />
-      <SectionBanner />
-    </>
+    <section className="py-10 @desktop:py-28">
+      <ContainerGrid>
+        <TitleSection
+          subtitle="Colecionadores em Foco"
+          title="Principais colecionadores"
+        />
+        <div className="flex flex-col @tablet:flex-row gap-4 ">
+          <div className="w-full space-y-4">
+            {leftColumn.map((card, index) => (
+              <CardCollectors key={index} index={index + 1} {...card} />
+            ))}
+          </div>
+          <div className="w-full space-y-4">
+            {rightColumn.map((card, index) => (
+              <CardCollectors
+                key={index + halfIndex}
+                index={index + halfIndex + 1}
+                {...card}
+              />
+            ))}
+          </div>
+        </div>
+      </ContainerGrid>
+    </section>
   );
 }

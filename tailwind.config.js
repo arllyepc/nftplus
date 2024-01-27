@@ -42,7 +42,6 @@ module.exports = {
         "lobo-size-mb": "10rem",
         "left-cont-footer": "20.25rem",
         "content-desc-hero": "41.125rem",
-
       },
       width: {
         "area-cards-mobile": "43.7rem",
@@ -69,7 +68,7 @@ module.exports = {
       },
       backgroundImage: {
         "hero-pattern": 'url("../assets/bg-hero.svg")',
-        banner: 'url("/bg-banner.svg")',
+        banner: 'url("../assets/bg-banner.svg")',
       },
     },
   },
