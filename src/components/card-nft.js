@@ -11,12 +11,13 @@ export function CardNft({
   name,
   valueBrl,
   valueBtc,
+  creator,
 }) {
   return (
     <div className="w-full max-w-card-nft overflow-hidden rounded-3xl border border-gray-border-card bg-gray-area-favorite">
       <div className="w-full h-area-image-nft overflow-hidden relative">
         <Image
-          src={ImageNft01}
+          src={thumbnail}
           alt="Imagem NFT"
           className="w-full h-full object-cover"
         />
@@ -27,7 +28,7 @@ export function CardNft({
       </div>
       <div className="w-full p-4">
         <h4 className="flex items-center gap-1 text-xs font-semibold mb-1">
-          Cartoon Collection
+          {creator}
           <Image src={IconVerify} alt="Icon Verify" />
         </h4>
         <h3 className="text-lg/none font-semibold mb-4">{name}</h3>
